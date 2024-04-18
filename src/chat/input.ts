@@ -1,4 +1,4 @@
-import { Broadcaster, Channel, Username } from "../broadcaster";
+import { Broadcaster, Username } from "../broadcaster";
 import style from "./input.module.css"
 
 export class Input {

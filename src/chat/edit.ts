@@ -1,4 +1,3 @@
-import { DiffId } from "../broadcaster";
 import style from "./edit.module.css"
 
 export class EditModal {

@@ -1,4 +1,5 @@
 import { Broadcaster, Channel, DiffId, Username } from "../broadcaster";
+import { CONFIG } from "../config";
 import { effect } from "../polyfill";
 import style from "./display.module.css"
 
@@ -17,6 +18,9 @@ export class Display {
         effect(() => {
             const diffs = this.channel.signal.get();
             for(const diff of diffs) {
+                if(CONFIG.DEBUG_LOG_DIFFS) {
+                    console.log(`apply diff #${diff.id} [${diff.kind}] to ${this.username}'s display`);
+                }
                 switch(diff.kind) {
                     case "push": {
                         const messageElem = document.createElement('div');
