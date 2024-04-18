@@ -4,7 +4,7 @@ Local chat w/ [JS Signals](https://github.com/tc39/proposal-signals)
 
 It's not really _chat_, i.e. no text is sent over the internet, just local between the windows
 
-Supports editing and deleting messages
+Supports editing and deleting messages (by hovering over the message in the author's window)
 
 Test case here is for the following, on top of lossy signals:
 
