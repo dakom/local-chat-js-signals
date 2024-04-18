@@ -1,0 +1,36 @@
+.container {
+    --horizontal-padding: 1rem;
+    --vertical-padding: 1rem;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    --container-width: calc(50vw - var(--horizontal-padding));
+    --container-height: calc(50vh - var(--vertical-padding));
+    width: var(--container-width);
+    height: var(--container-height);
+}
+
+.username {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.display {
+    overflow-y: auto;
+    flex: 1;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    width: var(--container-width);
+    height: var(--container-height);
+}
+
+.showModal {
+    display: block;
+}

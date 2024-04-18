@@ -1,0 +1,42 @@
+.container {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.message {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+}
+.myUsername {
+    color: green;
+}
+
+.otherUsername, .text {
+    color: #2a2a2a;
+}
+
+.text {
+    margin-left: 1rem;
+}
+
+.editAndDelete {
+    margin-left: 1rem;
+    display: none;
+    gap: .5rem;
+}
+
+.edit, .delete {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: cornflowerblue 
+}
+
+.edit:hover, .delete:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.show {
+    display: flex;
+}
