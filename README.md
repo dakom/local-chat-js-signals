@@ -11,8 +11,8 @@ Test case here is for the following, on top of lossy signals:
 1. No missed updates
 2. Efficient
     - Only affects the exact dom element being targetted
-    - Culls seen updates from memory over time
-3. No diffing
+    - Culls stale memory over time
+3. No dom diffing (it knows exactly what to apply and just does it)
 4. Vanilla ts
 
 The overall idea is that the signal contains an array of diffs to apply.
