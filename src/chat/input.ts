@@ -12,7 +12,7 @@ export class Input {
 
     render() {
         this.elem.innerHTML = `
-            <input id="text" type="text" class=${style.input} placeholder="Type a message...">
+            <input id="text" type="text" class=${style.input} placeholder="Type a message..." autocomplete=off>
             <div id="send" class=${style.button}><div>Send</div></button>
         `
 

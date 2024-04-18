@@ -66,10 +66,10 @@ export class Channel {
         this.signal = new Signal.State<ChannelDiffs>([])
     }
 
-    pushDiff(diff: DiffWithId) {
+    pushDiff(diff: Diff, id: DiffId) {
         // cull the already rendered diffs
         const diffs = this.signal.get().filter(diff => diff.id > this.renderedId);
-        diffs.push(diff);
+        diffs.push({...diff, id});
         this.signal.set(diffs);
     }
 
@@ -78,16 +78,14 @@ export class Channel {
             kind: "push",
             username,
             text,
-            id
-        });
+        }, id);
     }
 
     remove(removeId: DiffId, id: DiffId) {
         this.pushDiff({
             kind: "remove",
             removeId,
-            id
-        });
+        }, id);
     }
 
     edit(editId: DiffId, text: string, id: DiffId) {
@@ -95,7 +93,6 @@ export class Channel {
             kind: "edit",
             editId,
             text,
-            id
-        });
+        }, id);
     }
 }
